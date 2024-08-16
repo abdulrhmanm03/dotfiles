@@ -1,0 +1,19 @@
+font= Noto Sans 10
+background-color=#282a36
+text-color=#f8f8f2
+border-color=#6272a4
+width=1000
+max-icon-size=64
+layer=overlay
+
+[urgency=low]
+background-color=#44475a
+text-color=#f8f8f2
+
+[urgency=normal]
+background-color=#282a36
+text-color=#f8f8f2
+
+[urgency=critical]
+background-color=#ff5555
+text-color=#f8f8f2

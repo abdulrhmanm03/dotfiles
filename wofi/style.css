@@ -1,0 +1,32 @@
+* {
+  border: none;
+}
+
+window {
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: plum;
+  border-radius: 10px;
+}
+
+#entry {
+  padding: 10px;
+}
+
+#entry:selected {
+  background-color: purple;
+}
+
+#text:selected {
+  color: beige;
+}
+
+#input {
+  background-color: rgba(0, 0, 0, 0);
+  color: plum;
+  padding: 10px;
+}
+
+image {
+  margin: 0 10px;
+}
