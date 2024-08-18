@@ -1,38 +1,36 @@
 * {
   font-size: 15px;
   font-family: monospace;
-  background: black;
 }
 
 window#waybar {
-  background: #1e1525;
-  color: white;
+  background: #11111b;
+  color: #cba6f7;
 }
 
 #workspaces button {
   padding: 0 2px;
-  color: #ffffff;
+  color: #bac2de;
 }
 #workspaces button.focused {
-  color: #268bd2;
+  color: #94e2d5;
 }
 
 #pulseaudio {
-  color: #268bd2;
+  color: #89b4fa;
 }
 #memory {
-  color: #2aa198;
+  color: #a6e3a1;
 }
 #cpu {
-  color: #6c71c4;
+  color: #94e2d5;
 }
 #battery {
-  color: #859900;
+  color: #eba0ac;
 }
-#disk {
-  color: #b58900;
+#network {
+  color: #89dceb;
 }
-
 #clock,
 #pulseaudio,
 #memory,
