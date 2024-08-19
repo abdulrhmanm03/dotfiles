@@ -7,6 +7,7 @@ return {
 
 		require("lualine").setup({
 			options = {
+				component_separators = { left = "", right = "" },
 				globalstatus = true,
 			},
 			sections = {
@@ -21,7 +22,9 @@ return {
 						},
 					},
 				},
-				lualine_x = { "encoding", { "filetype", icon_only = true } },
+				lualine_z = { "" },
+				lualine_x = { "encoding" },
+				lualine_y = { "progress" },
 			},
 		})
 		local k = vim.keymap
