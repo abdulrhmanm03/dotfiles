@@ -22,9 +22,9 @@ return {
 						},
 					},
 				},
-				lualine_z = { "" },
-				lualine_x = { "encoding" },
-				lualine_y = { "progress" },
+				lualine_x = { "" },
+				lualine_y = { "encoding" },
+				lualine_z = { "progress" },
 			},
 		})
 		local k = vim.keymap
