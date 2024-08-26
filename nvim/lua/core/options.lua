@@ -6,8 +6,8 @@ o.relativenumber = true
 
 o.number = true
 
-o.tabstop = 4
-o.shiftwidth = 4
+o.tabstop = 2
+o.shiftwidth = 2
 o.expandtab = true
 o.autoindent = true
 
