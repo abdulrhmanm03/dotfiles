@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-  background: #11111b;
-  color: #cba6f7;
+  background: black;
+  color: white;
 }
 
 #workspaces button {

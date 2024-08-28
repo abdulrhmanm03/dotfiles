@@ -12,7 +12,7 @@ set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").pn
 set $screenclip slurp | grim -g - ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 #cool stuff
-bindsym Ctrl+f exec firefox
+bindsym $mod+shift+w exec firefox
 
 
 # Start mako for notifications
@@ -22,7 +22,7 @@ exec mako
 exec ~/.config/sway/battery_check.sh
 
 # Set the wallpaper
-output * bg ~/Pictures/wallpaper/wallhaven-1j769g.png fill
+output * bg ~/Pictures/wallpaper/wxp.jpg fill
 
 
 font pango:Nato Sans : 0.001
@@ -31,8 +31,6 @@ font pango:Nato Sans : 0.001
 default_border none
 
 gaps inner 5
-
-gaps outer 5
 
 
 # Volume control using pamixer
