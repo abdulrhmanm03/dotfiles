@@ -36,6 +36,7 @@ return {
 				"vimdoc",
 				"c",
 				"python",
+				"go",
 			},
 			auto_install = true,
 			incremental_selection = {

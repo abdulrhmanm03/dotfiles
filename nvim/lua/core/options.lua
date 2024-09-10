@@ -16,6 +16,9 @@ o.wrap = false
 o.ignorecase = true
 o.smartcase = true
 
+o.smartindent = true
+o.showmode = false
+
 o.termguicolors = true
 o.background = "dark"
 o.signcolumn = "yes"
@@ -27,4 +30,6 @@ o.clipboard:append("unnamedplus")
 o.splitright = true
 o.splitbelow = true
 
-o.scrolloff = 15
+o.scrolloff = 5
+o.sidescrolloff = 55
+o.cursorline = true

@@ -23,9 +23,9 @@ return {
 						},
 					},
 				},
-				lualine_x = { "" },
+				lualine_x = { "fileformat" },
 				lualine_y = { "encoding" },
-				lualine_z = { "progress" },
+				-- lualine_z = { "progress" },
 			},
 		})
 		local k = vim.keymap

@@ -36,6 +36,7 @@ return {
 				"bashls",
 				"sqls",
 				"clangd",
+				"gopls",
 			},
 		})
 
@@ -48,6 +49,7 @@ return {
 				"pylint",
 				"eslint-lsp",
 				"clang-format",
+				"golangci-lint",
 			},
 		})
 	end,

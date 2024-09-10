@@ -18,6 +18,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				c = { "clang-format" },
+				go = { "gofmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
