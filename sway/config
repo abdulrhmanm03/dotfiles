@@ -30,7 +30,6 @@ font pango:Nato Sans : 0.001
 #border and gaps
 default_border none
 
-gaps inner 5
 
 
 # Volume control using pamixer
