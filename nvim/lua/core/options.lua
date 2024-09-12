@@ -6,8 +6,8 @@ o.relativenumber = true
 
 o.number = true
 
-o.tabstop = 2
-o.shiftwidth = 2
+o.tabstop = 4
+o.shiftwidth = 4
 o.expandtab = true
 o.autoindent = true
 
@@ -31,5 +31,5 @@ o.splitright = true
 o.splitbelow = true
 
 o.scrolloff = 5
-o.sidescrolloff = 55
+o.sidescrolloff = 35
 o.cursorline = true
