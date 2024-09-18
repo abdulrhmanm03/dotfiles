@@ -124,6 +124,10 @@ return {
 			["clangd"] = function()
 				lspconfig["clangd"].setup({
 					filetypes = { "c" },
+					cmd = {
+						"clangd",
+						"--fallback-style=webkit",
+					},
 				})
 			end,
 		})

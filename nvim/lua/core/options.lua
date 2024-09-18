@@ -30,6 +30,6 @@ o.clipboard:append("unnamedplus")
 o.splitright = true
 o.splitbelow = true
 
-o.scrolloff = 5
-o.sidescrolloff = 35
+o.scrolloff = 8
+o.sidescrolloff = 25
 o.cursorline = true
