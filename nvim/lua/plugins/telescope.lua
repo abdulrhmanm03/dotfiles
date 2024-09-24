@@ -21,8 +21,8 @@ return {
 				path_display = { "smart" },
 				mappings = {
 					i = {
-						["<C-k>"] = actions.move_selection_previous, -- move to prev result
-						["<C-j>"] = actions.move_selection_next, -- move to next result
+						["<A-k>"] = actions.move_selection_previous, -- move to prev result
+						["<A-j>"] = actions.move_selection_next, -- move to next result
 					},
 				},
 			},

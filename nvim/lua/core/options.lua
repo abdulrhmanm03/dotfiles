@@ -1,3 +1,9 @@
+vim.filetype.add({
+	extension = {
+		pl = "prolog",
+	},
+})
+
 vim.cmd("let g:netrw_liststyle = 3")
 
 local o = vim.opt
