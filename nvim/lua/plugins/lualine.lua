@@ -2,9 +2,6 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local lualine = require("lualine")
-		local lazy_status = require("lazy.status")
-
 		require("lualine").setup({
 			options = {
 				component_separators = { left = "", right = "" },
@@ -14,33 +11,22 @@ return {
 			sections = {
 				lualine_c = {
 					{
-						"buffers",
-						hide_filename_extension = true,
-						mode = 2,
-						max_length = vim.o.columns * 3 / 4,
-						filetype_names = {
-							NvimTree = "",
-							TelescopePrompt = "",
-							alpha = "Save the bees",
+						"filename",
+						newfile_status = true, -- Display new file status (new file means no write after created)
+						path = 1,
+
+						symbols = {
+							modified = "(M)", -- Text to show when the file is modified.
+							readonly = "(R)", -- Text to show when the file is non-modifiable or readonly.
+							unnamed = "", -- Text to show for unnamed buffers.
+							newfile = "(New)", -- Text to show for newly created file before first write
 						},
 					},
 				},
-				lualine_x = { "fileformat" },
+				lualine_x = { "filetype" },
 				lualine_y = { "encoding" },
 				lualine_z = { "progress" },
 			},
 		})
-		local k = vim.keymap
-
-		k.set("n", "<A-1>", "<cmd>LualineBuffersJump! 1<CR>")
-		k.set("n", "<A-2>", "<cmd>LualineBuffersJump! 2<CR>")
-		k.set("n", "<A-3>", "<cmd>LualineBuffersJump! 3<CR>")
-		k.set("n", "<A-4>", "<cmd>LualineBuffersJump! 4<CR>")
-		k.set("n", "<A-5>", "<cmd>LualineBuffersJump! 5<CR>")
-		k.set("n", "<A-6>", "<cmd>LualineBuffersJump! 6<CR>")
-		k.set("n", "<A-7>", "<cmd>LualineBuffersJump! 7<CR>")
-		k.set("n", "<A-8>", "<cmd>LualineBuffersJump! 8<CR>")
-		k.set("n", "<A-9>", "<cmd>LualineBuffersJump! 9<CR>")
-		k.set("n", "<A-0>", "<cmd>LualineBuffersJump! $<CR>")
 	end,
 }
