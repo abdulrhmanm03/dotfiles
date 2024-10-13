@@ -1,6 +1,7 @@
-include ./theme.conf
-
 font_size 14
+
+# (top, right, bottom, left)
+window_padding_width 10 5 0 5  
 
 enabled_layouts splits,stack
 
@@ -12,9 +13,7 @@ map ctrl+shift+down resize_window shorter 3
 map ctrl+shift+n new_tab_with_cwd
 
 map ctrl+shift+w launch --cwd=current
-
-
-wayland_titlebar_color background
+# wayland_titlebar_color background
 # hide_window_decorations yes
 
 tab_bar_style powerline
@@ -58,3 +57,9 @@ map shift+up move_window up
 map shift+left move_window left
 map shift+right move_window right
 map shift+down move_window down
+
+
+# BEGIN_KITTY_THEME
+# Kanagawa
+include current-theme.conf
+# END_KITTY_THEME
