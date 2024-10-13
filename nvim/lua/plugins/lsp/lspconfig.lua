@@ -89,47 +89,46 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
-					},
-				})
-			end,
+			["rust_analyzer"] = function() end,
+		})
 
-			["gopls"] = function()
-				lspconfig["gopls"].setup({
-					hints = {
-						assignVariableTypes = true,
-						compositeLiteralFields = true,
-						compositeLiteralTypes = true,
-						constantValues = true,
-						functionTypeParameters = true,
-						parameterNames = true,
-						rangeVariableTypes = true,
+		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
 					},
-				})
-			end,
+					completion = {
+						callSnippet = "Replace",
+					},
+				},
+			},
+		})
 
-			["clangd"] = function()
-				lspconfig["clangd"].setup({
-					filetypes = { "c" },
-					cmd = {
-						"clangd",
-						"--fallback-style=webkit",
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+			hints = {
+				assignVariableTypes = true,
+				compositeLiteralFields = true,
+				compositeLiteralTypes = true,
+				constantValues = true,
+				functionTypeParameters = true,
+				parameterNames = true,
+				rangeVariableTypes = true,
+			},
+		})
+
+		lspconfig.cssls.setup({
+			capabilities = capabilities,
+			settings = {
+				css = {
+					lint = {
+						unknownAtRules = "ignore",
 					},
-				})
-			end,
+				},
+			},
 		})
 	end,
 }

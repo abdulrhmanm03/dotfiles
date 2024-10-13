@@ -17,6 +17,9 @@ return {
 				file_ignore_patterns = {
 					"node_modules",
 					"venv",
+					".git",
+					"go.sum",
+					"go.mod",
 				},
 				path_display = { "smart" },
 				mappings = {

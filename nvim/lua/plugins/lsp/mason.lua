@@ -37,6 +37,7 @@ return {
 				"sqls",
 				"clangd",
 				"gopls",
+				"rust_analyzer",
 			},
 		})
 
