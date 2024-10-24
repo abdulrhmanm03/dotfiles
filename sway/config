@@ -12,7 +12,7 @@ set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").pn
 set $screenclip slurp | grim -g - ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 #cool stuff
-bindsym $mod+shift+w exec firefox
+bindsym $mod+shift+w exec zen-browser
 
 
 # Start mako for notifications

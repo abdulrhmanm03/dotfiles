@@ -4,20 +4,20 @@
 	"layer": "top",
 	"position": "top",
 
-	"modules-left": [
+	"modules-right": [
 		"sway/workspaces",
 	],
 	"modules-center": [
-		"clock#1",
-		"clock#2",
-		"clock#3",
 	],
-	"modules-right": [
+	"modules-left": [
+		"battery",
 		"pulseaudio",
 		"memory",
 		"cpu",
-		"battery",
         "network",
+		"clock#1",
+		"clock#2",
+		"clock#3",
 	],
 
 
@@ -27,20 +27,20 @@
 	},
 
 	"clock#1": {
-		"format": "{:%a}",
+		"format": "{:%m-%d}",
 		"tooltip": false
 	},
 	"clock#2": {
-		"format": "{:%I:%M}",
+		"format": "{:%a}",
 		"tooltip": false
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%I:%M}",
 		"tooltip": false
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
+		"format": "{volume:2}% {icon}",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "MUTE",
 		"format-icons": {
@@ -56,11 +56,11 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": "{}% Mem"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"format": "{usage:2}% CPU"
 	},
 	"battery": {
 		"states": {
@@ -68,7 +68,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",
+		"format": "  {capacity}% {icon}",
 		"format-icons": [
 			"",
 			"",
@@ -79,7 +79,7 @@
 	},
 	"network": {
 		"interval": 5,
-		"format-wifi": " {essid}[{signalStrength}%] ",
+		"format-wifi": "{essid}",
 		"format-ethernet": " {ifname}",
 		"format-disconnected": "No connection",
 		"format-alt": " {ipaddr}/{cidr}",
