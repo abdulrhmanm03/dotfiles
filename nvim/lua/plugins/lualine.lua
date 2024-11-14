@@ -2,6 +2,19 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local clients_lsp = function()
+			local clients = vim.lsp.get_clients()
+			if next(clients) == nil then
+				return ""
+			end
+
+			local c = {}
+			for _, client in pairs(clients) do
+				table.insert(c, client.name)
+			end
+			return "\u{f085} " .. table.concat(c, "|")
+		end
+
 		require("lualine").setup({
 			options = {
 				component_separators = { left = "", right = "" },
@@ -13,7 +26,7 @@ return {
 					{
 						"filename",
 						newfile_status = true, -- Display new file status (new file means no write after created)
-						path = 1,
+						path = 4,
 
 						symbols = {
 							modified = "(M)", -- Text to show when the file is modified.
@@ -23,10 +36,20 @@ return {
 						},
 					},
 				},
-				lualine_x = { "filetype" },
+				lualine_x = { clients_lsp, "filetype" },
 				lualine_y = { "encoding" },
 				lualine_z = { "progress" },
 			},
 		})
 	end,
 }
+-- return {
+-- 	"sschleemilch/slimline.nvim",
+-- 	dependencies = {
+-- 		"lewis6991/gitsigns.nvim",
+-- 		"echasnovski/mini.nvim",
+-- 	},
+-- 	opts = {
+-- 		style = "fg",
+-- 	},
+-- }
